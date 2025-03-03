@@ -1,23 +1,51 @@
-//
-//  ContentView.swift
-//  Diary_Map
-//
-//  Created by 牟禮優汰 on 2025/02/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack(alignment: .bottom) {
+            Color.white.ignoresSafeArea()
+            
+            
+            
+            
+            VStack {
+                Divider()
+                HStack(alignment: .center){
+                    Spacer()
+                    Button(action: {}) {
+                        VStack {
+                           Image(systemName: "calendar")
+                                .font(.system(size:25))
+                        }
+                        .padding(.top,10)
+                        .padding(.trailing,20)
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        VStack {
+                           Image(systemName: "map")
+                                .font(.system(size:25))
+                        }
+                        .padding(.top,10)
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        VStack {
+                           Image(systemName: "person.circle")
+                                .font(.system(size:25))
+                        }
+                        .padding(.top,10)
+                        .padding(.leading,20)
+                    }
+                    Spacer()
+                }
+
+            }
+            .frame(height: 50)
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
